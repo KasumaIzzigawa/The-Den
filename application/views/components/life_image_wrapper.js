@@ -1,29 +1,38 @@
-import cityscape from "./cityscape.jpg";
-
 const e = React.createElement;
 
 class LifeImgWrapper extends React.Component{
     constructor(props){
         super(props);
-        this.state = { hover: false };
+        this.state = {
+            hover: false,
+            message: ""
+        };
+        this.hoverOn = this.hoverOn.bind(this);
+        this.hoverOff = this.hoverOff.bind(this);
     }
 
-    onMouseOver(e) {
-        this.setState({ hover: true })
-        e.target.style.background = 'red';
+    
+    hoverOn(e) {
+        this.setState({
+            hover: true,
+            message: "Life"
+        })
     }
 
-    onMouseOut(e) {
-        this.setState({ hover: false})
-        e.target.style.background = "";
+    hoverOff(e) {
+        this.setState({
+            hover: false,
+            message: ""
+        })
     }
 
 
     render() {
-        <img src={cityscape} alt="A cityscape" />
-        return e(
-            { onMouseOver: () => this.onMouseOver },
-            { onMouseOut: () => this.onMouseOut }
+        return e("image", {
+            onMouseOver: () => this.hoverOn(),
+            onMouseOut: () => this.hoverOff()
+            },
+            "Hello"
         );
     }
 }

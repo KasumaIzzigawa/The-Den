@@ -23,7 +23,11 @@
       </div>
     </div>
     <div id="like_button_container"></div>
-    <div id="life_image"></div>
+    <div class="container" id="article_categories">
+      <div id="life_image">
+        <img src="./components/cityscape.jpg" alt="A cityscape">
+      </div>
+    </div>
 
     <?php include "./scripts.html"; ?>
   </body>
