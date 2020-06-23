@@ -6,6 +6,7 @@
     <title>The Den</title>
   </head>
   <body>
+    <!-- Includes navigation bar -->
     <div id="navbar">
       <?php include "./navbar.html"; ?>
     </div>
@@ -22,6 +23,7 @@
       </div>
     </div>
     <div id="like_button_container"></div>
+    <div id="life_image"></div>
 
     <?php include "./scripts.html"; ?>
   </body>
