@@ -1,0 +1,16 @@
+body {
+    background-image: url("./components/siteBG.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#latest_article1, #latest_article2 {
+    min-height: 200px;
+    border-style: groove;
+    border-width: 2px;
+    margin: 10px;
+    background-color: azure;
+    opacity: 0.8;
+}
