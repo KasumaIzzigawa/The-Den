@@ -27,13 +27,13 @@
         </div>
       </div>
       <div class="row" id="article_categories">
-        <div class="col-12 col-md">
+        <div class="col-4">
           <div id="image_category1"></div>
         </div>
-        <div class="col-12 col-md">
+        <div class="col-4">
           <div id="image_category2"></div>
         </div>
-        <div class="col-12 col-md">
+        <div class="col-4">
           <div id="image_category3"></div>
         </div>
       </div>

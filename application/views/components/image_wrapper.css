@@ -1,4 +1,4 @@
-.container {
+.img-container {
     position: relative;
     width: 50%;
   }
@@ -10,13 +10,13 @@
     left: 0;
     right: 0;
     height: 275px;
-    width: 400px;
+    width: 325px;
     opacity: 0;
     transition: .5s ease;
     background-color: white;
 }
   
-.container:hover .overlay {
+.img-container:hover .overlay {
     opacity: 1.0;
 }
   
@@ -30,6 +30,6 @@
 }
   
 img {
-  width: 400px;
+  width: 325px;
   height: 275px;
 }

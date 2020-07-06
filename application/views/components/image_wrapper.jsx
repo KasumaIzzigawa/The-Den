@@ -1,5 +1,3 @@
-import "./image_wrapper.css"; //Imports CSS file for component
-
 class ImgWrapper extends React.Component{
     constructor(props){
         super(props);
@@ -31,7 +29,7 @@ class ImgWrapper extends React.Component{
     render() {
         return (
             <div>
-                <div className="container">
+                <div className="img-container">
                     <img className={this.state.css_class} src={ this.props.url } onMouseOver={ this.hoverOn } onMouseLeave={ this.hoverOff } />
                     <div className="overlay">
                       <div className="center_text">{ this.props.text } </div>
@@ -45,6 +43,6 @@ class ImgWrapper extends React.Component{
 const ImageContainer_1 = document.querySelector("#image_category1");
 const ImageContainer_2 = document.querySelector("#image_category2");
 const ImageContainer_3 = document.querySelector("#image_category3");
-ReactDOM.render(<ImgWrapper url={"./cityscape.jpg"} text={'LIFE'} />, ImageContainer_1);
-ReactDOM.render(<ImgWrapper url={"./food.jpg"} text={'FOOD'} />, ImageContainer_2);
-ReactDOM.render(<ImgWrapper url={"./vgcontrollers.jpg"} text={'GAMES'} />, ImageContainer_3);
+ReactDOM.render(<ImgWrapper url={"./components/cityscape.jpg"} text={'LIFE'} />, ImageContainer_1);
+ReactDOM.render(<ImgWrapper url={"./components/food.jpg"} text={'FOOD'} />, ImageContainer_2);
+ReactDOM.render(<ImgWrapper url={"./components/vgcontrollers.jpg"} text={'GAMES'} />, ImageContainer_3);
