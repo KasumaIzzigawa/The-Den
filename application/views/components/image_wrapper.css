@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     height: 275px;
-    width: 325px;
+    width: 350px;
     opacity: 0;
     transition: .5s ease;
     background-color: white;
@@ -30,6 +30,6 @@
 }
   
 img {
-  width: 325px;
+  width: 350px;
   height: 275px;
 }
