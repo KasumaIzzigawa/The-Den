@@ -6,17 +6,23 @@
 
     $db = new PDO($dsn, $username, $password); //Creates PDO
 
-    $articleID = 1;
+    //Sets up variables and arrays for looping latest two articles
+    $articleID = 2;
+    $article_name = array(2);
+    $article_date = array(2);
+    $article_content = array(2);
 
-    $selection = "SELECT articleName, articleDate, articleContent
-                  FROM articles
-                  WHERE articleID = $articleID";
+    //Loops and sets columns of each row into arrays
+    for ($i = 2; $i <= $articleID && $i > 0; $i--) {
+        $selection = "SELECT articleName, articleDate, articleContent
+                      FROM articles
+                      WHERE articleID = $i";
     
-    $articles = $db->query($selection);
-    $article = $articles->fetch();
+        $articles = $db->query($selection);
+        $article = $articles->fetch();
 
-    $article_name = $article["articleName"];
-    $article_date = $article["articleDate"];
-    $article_content = $article["articleContent"];
-    
+        $article_name[$i-1] = $article["articleName"];
+        $article_date[$i-1] = $article["articleDate"];
+        $article_content[$i-1] = $article["articleContent"];
+    }
 ?>
