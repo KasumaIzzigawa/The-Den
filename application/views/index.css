@@ -6,7 +6,7 @@ body {
     background-size: cover;
 }
 
-#latest_article1, #latest_article2 {
+#latest_article1, #latest_article2, #bio {
     min-height: 200px;
     border-style: groove;
     border-width: 2px;
@@ -14,4 +14,11 @@ body {
     margin-bottom: 10px;
     background-color: azure;
     opacity: 0.8;
+}
+
+#bio-image {
+    width: 350px;
+    height: 275px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

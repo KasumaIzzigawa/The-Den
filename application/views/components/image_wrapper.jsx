@@ -30,10 +30,12 @@ class ImgWrapper extends React.Component{
         return (
             <div>
                 <div className="img-container">
-                    <img className={this.state.css_class} src={ this.props.url } onMouseOver={ this.hoverOn } onMouseLeave={ this.hoverOff } />
-                    <div className="overlay">
-                      <div className="center_text">{ this.props.text } </div>
-                    </div>
+                    <img id="img_categories" className={this.state.css_class} src={ this.props.url } onMouseOver={ this.hoverOn } onMouseLeave={ this.hoverOff } />
+                    <a href={this.props.link}>
+                        <div className="overlay">
+                            <div className="center_text">{ this.props.text } </div>
+                        </div>
+                    </a>
                 </div>
             </div>            
         );
@@ -43,6 +45,6 @@ class ImgWrapper extends React.Component{
 const ImageContainer_1 = document.querySelector("#image_category1");
 const ImageContainer_2 = document.querySelector("#image_category2");
 const ImageContainer_3 = document.querySelector("#image_category3");
-ReactDOM.render(<ImgWrapper url={"./components/cityscape.jpg"} text={'LIFE'} />, ImageContainer_1);
-ReactDOM.render(<ImgWrapper url={"./components/food.jpg"} text={'FOOD'} />, ImageContainer_2);
-ReactDOM.render(<ImgWrapper url={"./components/vgcontrollers.jpg"} text={'GAMES'} />, ImageContainer_3);
+ReactDOM.render(<ImgWrapper url={"./components/cityscape.jpg"} text={"LIFE"} link={"./life_articles.php"} />, ImageContainer_1);
+ReactDOM.render(<ImgWrapper url={"./components/food.jpg"} text={"FOOD"} link={"./food_articles.php"} />, ImageContainer_2);
+ReactDOM.render(<ImgWrapper url={"./components/vgcontrollers.jpg"} text={"GAMES"} link={"./game_articles.php"} />, ImageContainer_3);

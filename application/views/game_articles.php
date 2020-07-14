@@ -1,4 +1,4 @@
-<?php require "../models/index_db.php"; ?>
+<?php require "../models/game_db.php"; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,17 +29,6 @@
             <p><?php echo $article_content[0]; ?></p>
           </div>
         </div>  
-      </div>
-      <div class="row" id="article_categories">
-        <div class="col-4">
-          <div id="image_category1"></div>
-        </div>
-        <div class="col-4">
-          <div id="image_category2"></div>
-        </div>
-        <div class="col-4">
-          <div id="image_category3"></div>
-        </div>
       </div>
     </div>
 
