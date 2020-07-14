@@ -6,7 +6,7 @@ body {
     background-size: cover;
 }
 
-#latest_article1, #latest_article2, #bio {
+#latest_article1, #latest_article2, #bio, #article {
     min-height: 200px;
     border-style: groove;
     border-width: 2px;
