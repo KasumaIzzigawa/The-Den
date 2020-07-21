@@ -12,23 +12,23 @@
       <?php include "./navbar.html"; ?>
     </div>
     <div class="container">
-      <div class="row">
+    <div class="row">
         <div class="col-12">
-          <div id="latest_article1">
-            <h3><?php echo $article_name[1]; ?></h3>
-            <h6><em><?php echo $article_date[1]; ?></em></h6>
-            <p><?php echo $article_content[1]; ?></p>
+          <div id="article">
+            <h3><?php echo $article_name[count($article_name)-1]; ?></h3>
+            <h6><em><?php echo $article_date[count($article_date)-1]; ?></em></h6>
+            <p><?php echo $article_content[count($article_content)-1]; ?></p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <div id="latest_article2">
-            <h3><?php echo $article_name[0]; ?></h3>
-            <h6><em><?php echo $article_date[0]; ?></em></h6>
-            <p><?php echo $article_content[0]; ?></p>
+          <div id="article">
+            <h3><?php echo $article_name[count($article_name)-2]; ?></h3>
+            <h6><em><?php echo $article_date[count($article_date)-2]; ?></em></h6>
+            <p><?php echo $article_content[count($article_content)-2]; ?></p>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
 

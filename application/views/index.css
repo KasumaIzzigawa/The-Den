@@ -8,12 +8,27 @@ body {
 
 #latest_article1, #latest_article2, #bio, #article {
     min-height: 200px;
+    max-height: 230px;
     border-style: groove;
     border-width: 2px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: azure;
     opacity: 0.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    content: "";
+    position: relative;
+    
+}
+#latest_article1::before, #latest_article2::before, #bio::before, #article::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 200px, white);
 }
 
 #bio-image {
