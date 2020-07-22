@@ -45,6 +45,6 @@ class ImgWrapper extends React.Component{
 const ImageContainer_1 = document.querySelector("#image_category1");
 const ImageContainer_2 = document.querySelector("#image_category2");
 const ImageContainer_3 = document.querySelector("#image_category3");
-ReactDOM.render(<ImgWrapper url={"./components/cityscape.jpg"} text={"LIFE"} link={"./life_articles.php"} />, ImageContainer_1);
-ReactDOM.render(<ImgWrapper url={"./components/food.jpg"} text={"FOOD"} link={"./food_articles.php"} />, ImageContainer_2);
-ReactDOM.render(<ImgWrapper url={"./components/vgcontrollers.jpg"} text={"GAMES"} link={"./game_articles.php"} />, ImageContainer_3);
+ReactDOM.render(<ImgWrapper url={"./application/views/components/cityscape.jpg"} text={"LIFE"} link={"./life_articles.php"} />, ImageContainer_1);
+ReactDOM.render(<ImgWrapper url={"./application/views/components/food.jpg"} text={"FOOD"} link={"./food_articles.php"} />, ImageContainer_2);
+ReactDOM.render(<ImgWrapper url={"./application/views/components/vgcontrollers.jpg"} text={"GAMES"} link={"./game_articles.php"} />, ImageContainer_3);
