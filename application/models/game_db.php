@@ -1,10 +1,6 @@
 <?php
-    //Sets up variables for PDO
-    $dsn = "mysql:host=localhost;dbname=kazblog";
-    $username = "kasuma";
-    $password = "111324";
-
-    $db = new PDO($dsn, $username, $password); //Creates PDO
+    //Grabs file for database connection
+    require "config.php";
 
     //Creates arrays to store elements
     $article = array();

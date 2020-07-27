@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <?php include "./head.html"; ?>
-    <title>The Den</title>
+    <title>The Den: Game Articles</title>
   </head>
   <body>
     <!-- Includes navigation bar -->
