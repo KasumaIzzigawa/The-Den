@@ -13,8 +13,8 @@
                   FROM articles
                   WHERE categoryID = 3
                   ORDER BY articleID";
-    
     $results = $db->query($selection);
+    $row_count = $results->rowCount();
     foreach($results as $article) {
         $article_name[] = $article["articleName"];
         $article_date[] = $article["articleDate"];
