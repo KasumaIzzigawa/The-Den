@@ -1,7 +1,7 @@
 <?php
     //Sets up variables for PDO
-    $dsn = "mysql:host=localhost;dbname=xeonsold_kaz_blog";
-    $username = "xeonsold_kasuma";
+    $dsn = "mysql:host=localhost;dbname=kazblog";
+    $username = "kasuma";
     $password = "111324";
 
     try {
