@@ -15,16 +15,18 @@
       <?php include "./navbar.html"; ?>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div id="chosen_article">
-                  <h3><?php echo $article_name; ?></h3>
-                  <h6><em><?php echo $article_date; ?></em></h6>
-                  <p><?php echo $article_content; ?></p>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <div id="article_view"></div>
         </div>
+      </div>
     </div>
     <?php include "./scripts.html"; ?>
+    <script type="text/javascript">
+      $(function() {
+        const ArticleContainer = document.querySelector("#article_view");
+        ReactDOM.render(<ArticleDisplay article=<?php echo json_encode($article_view);?> />, ArticleContainer);
+      });
+    </script>
   </body>
 </html>
