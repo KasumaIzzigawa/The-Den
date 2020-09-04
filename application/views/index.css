@@ -22,8 +22,8 @@ body {
 
 
 #bio-image {
-    width: 350px;
-    height: 275px;
+    width: 275px;
+    height: 230px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -49,4 +49,16 @@ body {
     margin-bottom: 10px;
     background-color: azure;
     opacity: 0.8;
+}
+
+#ttv_logo, #yt_logo {
+    margin-top: 10px;
+    width: 240px;
+    height: 190px;
+}
+
+#ttv {
+    margin-bottom: 10px;
+    width: 240px;
+    height: 30px;
 }

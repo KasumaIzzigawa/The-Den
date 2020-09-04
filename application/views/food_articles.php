@@ -1,4 +1,9 @@
-<?php require "../models/food_db.php"; ?>
+<?php
+  include "../models/config.php";
+  require "../models/food_db.php"; 
+  include SITE_PATH . "/application/controllers/services.php";
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,9 +16,12 @@
     <div id="navbar">
       <?php include "./navbar.html"; ?>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-2">
+          <?php include "./twitch.html"; ?>
+        </div>
+        <div class="col-8">
           <div id="article">
             <h3><?php echo $article_name[count($article_name)-1]; ?></h3>
             <h6><em><?php echo $article_date[count($article_date)-1]; ?></em></h6>
@@ -22,8 +30,13 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-2">
+          <?php include "./yt.html"; ?>
+        </div>
+        <div class="col-8">
           <div id="article">
             <h3><?php echo $article_name[count($article_name)-2]; ?></h3>
             <h6><em><?php echo $article_date[count($article_date)-2]; ?></em></h6>

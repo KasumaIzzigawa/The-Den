@@ -1,11 +1,14 @@
 <?php
     //Grabs file for database connection
-    require "config.php";
+    require "config_db.php";
 
     //Creates arrays to store elements
     $article = array();
+    
     $article_name = array();
+    
     $article_date = array();
+    
     $article_content = array();
 
     //Loops and sets columns of each row into arrays
@@ -13,9 +16,12 @@
                   FROM articles
                   WHERE categoryID = 1
                   ORDER BY articleID";
+    
     $results = $db->query($selection);
+    
     $row_count = $results->rowCount();
-    foreach($results as $article) {
+    
+    foreach ($results as $article) {
         $article_name[] = $article["articleName"];
         $article_date[] = $article["articleDate"];
         $article_content[] = $article["articleContent"];

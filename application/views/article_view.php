@@ -22,10 +22,16 @@
       </div>
     </div>
     <?php include "./scripts.html"; ?>
-    <script type="text/javascript">
-      $(function() {
+    <script type="text/babel">
+      $(document).ready(function() {
         const ArticleContainer = document.querySelector("#article_view");
-        ReactDOM.render(<ArticleDisplay article=<?php echo json_encode($article_view);?> />, ArticleContainer);
+
+        const e = React.createElement;
+
+        ReactDOM.render(
+          e(ArticleDisplay, {article:<?php echo json_encode($article_view); ?>}, null),
+          ArticleContainer
+        );
       });
     </script>
   </body>
