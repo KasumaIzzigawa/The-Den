@@ -47,7 +47,7 @@
         //Takes requested JSON data and makes it accessible within PHP
         $stream = json_decode($stream_data, true);
         
-        if ($stream["data"] === null) {
+        if ($stream["data"] == null) {
             $status = "<img id='ttv' src='/application/views/components/TwitchOffline.jpg' />";
         } else {
             $status = "<img id='ttv' src='/application/views/components/TwitchLive.jpg' />";
