@@ -3,7 +3,6 @@
 
     $access_token = "";
     $stream_status = "";
-    $query_results = array();
 
     //Retrieves access token from Twitch servers
     function get_token() {
@@ -48,37 +47,43 @@
         //Takes requested JSON data and makes it accessible within PHP
         $stream = json_decode($stream_data, true);
         
-        if ($stream["id"] === null) {
-            $status = "<img id='ttv' src='/The-Den/application/views/components/TwitchOffline.jpg' />";
+        if ($stream["data"] === null) {
+            $status = "<img id='ttv' src='/application/views/components/TwitchOffline.jpg' />";
         } else {
-            $status = "<img id='ttv' src='/The-Den/application/views/components/TwitchLive.jpg' />";
+            $status = "<img id='ttv' src='/application/views/components/TwitchLive.jpg' />";
         }
 
         return $status;
     }
 
     //Retrieves expiration date of current token from database
-    $date_query = "SELECT access, endTime
+    $date_query = "SELECT endTime
                    FROM token
                    WHERE id = 1";
     
     $expQuery = $db->query($date_query);
 
-    foreach ($expQuery as $query_results) {
-        $expTime = $query_results["endTime"];
-        $current_token = $query_results["access"];
-    }
-    
+    $expTime = $expQuery->fetch();
+
+    $access_query = "SELECT access
+                     FROM token
+                     WHERE id = 1";
+
+    $tokenQuery = $db->query($access_query);
+
+    $current_token = $tokenQuery->fetch();
+
     $now = new DateTime();
 
-    $current_time = $now->format("Y-m-d H:i:s");
-    
-    $newEXP = $now->modify("+1 month");
-
-    $expiration = $newEXP->format("Y-m-d H:i:s");
-
-    if ($current_time > $expTime) {
+    if ($now > $expTime) {
+        
         $access_token = get_token();
+        
+        $current_time = $now->format("Y-m-d H:i:s");
+        
+        $newEXP = $now->modify("+1 month");
+
+        $expiration = $newEXP->format("Y-m-d H:i:s");
 
         $update_query = "UPDATE token
                          SET access = $access_token
