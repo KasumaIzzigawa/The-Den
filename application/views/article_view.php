@@ -1,7 +1,11 @@
 <?php
   $id = $_REQUEST["id"];
+
+  include "../models/config.php";
   require "../models/article_view_db.php";
+  include SITE_PATH . "/application/controllers/services.php";
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,9 +18,15 @@
     <div id="navbar">
       <?php include "./navbar.html"; ?>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-2">
+          <?php 
+            include "./twitch.html";
+            include "./yt.html";
+          ?>
+        </div>
+        <div class="col-8">
           <div id="article_view"></div>
         </div>
       </div>
