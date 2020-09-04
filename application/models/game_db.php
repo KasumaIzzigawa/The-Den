@@ -1,6 +1,6 @@
 <?php
     //Grabs file for database connection
-    require "config.phgp";
+    require "config_db.php";
 
     //Creates arrays to store elements
     $article = array();
