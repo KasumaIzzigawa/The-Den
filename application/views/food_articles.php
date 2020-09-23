@@ -52,6 +52,8 @@
       $article_counter = 3;
 
       $row_counter = 2;
+
+      $aID = $row_count - $row_counter;
       
       while ($articles_left > 0) {
         echo 
@@ -62,7 +64,7 @@
                   <h3>'. $article_name[count($article_name)-$article_counter] . '</h3>
                   <h6><em>'. $article_date[count($article_date)-$article_counter] . '</em></h6>
                   <p>'. $article_content[count($article_content)-$article_counter] . '</p>
-                  <a id="more" class="btn btn-primary btn-sm animate__animated" type="button" href="./article_view.php?id=<?php echo $row_count - '. $row_counter . ' ?>">Read More</a>
+                  <a id="more" class="btn btn-primary btn-sm animate__animated" type="button" href="./article_view.php?id='. $aID . '">Read More</a>
                 </div>
               </div>
             </div>
